@@ -12,6 +12,7 @@ const quizController = {
 				.sample(1);
 
 			res.status(200).send({
+				quiz_id: randomQuiz[0]._id,
 				difficulty_level: randomQuiz[0].difficulty_level,
 				questions: randomQuiz[0].questions,
 			});
@@ -20,7 +21,36 @@ const quizController = {
 		}
 	},
 	submitquiz: async (req, res) => {
-		res.status(200).send("Quizes I guess");
+		try {
+			// Calculating result
+			const quizID = req.body.quiz_id;
+			const quiz = await Quiz.findById(quizID).exec();
+			const quizAnswers = req.body.quiz_answers;
+			const quizKey = quiz.keys;
+			let correctAnswerCount = 0;
+			for (let index = 0; index < quizKey.length; index++) {
+				if (quizKey[index] == quizAnswers[index]) {
+					correctAnswerCount += 1;
+				}
+			}
+			const resultPerc = (correctAnswerCount / quizKey.length) * 100;
+
+			// Create object based on Result model
+			const result = new Result({
+				user: res.id,
+				quiz_id: quizID,
+				difficulty_level: quiz.difficulty_level,
+				percentage: resultPerc,
+			});
+
+			//Save document to database
+			const savedResult = await result.save();
+
+			//Return success message
+			res.status(201).send(savedResult);
+		} catch (err) {
+			res.status(500).send({ error: err });
+		}
 	},
 	createquiz: async (req, res) => {
 		try {

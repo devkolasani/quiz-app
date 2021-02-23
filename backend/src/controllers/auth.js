@@ -38,7 +38,7 @@ const authController = {
 			);
 
 			// Return access token
-			res.header("auth-token", token).status(202).send(token);
+			res.status(202).send(token);
 		} catch (err) {
 			res.status(500).send({ error: err });
 		}
