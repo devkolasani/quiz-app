@@ -1,4 +1,6 @@
 // Libraries
+const cors = require("cors");
+const morgan = require("morgan");
 const express = require("express");
 const mongoose = require("mongoose");
 
@@ -18,7 +20,11 @@ db.once("open", () => console.log("Connected to Database"));
 const app = express();
 
 // Middleware
+app.use(cors());
 app.use(express.json());
+app.use(
+	morgan(":method :url :status :res[content-length] - :response-time ms")
+);
 
 // Routes
 const authRouter = require("./routes/auth");

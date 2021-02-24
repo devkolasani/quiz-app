@@ -38,7 +38,10 @@ const authController = {
 			);
 
 			// Return access token
-			res.status(202).send(token);
+			res.status(202).send({
+				name: user.name,
+				auth_token: token,
+			});
 		} catch (err) {
 			res.status(500).send({ error: err });
 		}
