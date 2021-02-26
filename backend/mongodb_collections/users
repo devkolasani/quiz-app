@@ -1,0 +1,76 @@
+[{
+  "_id": {
+    "$oid": "6032a3013a3c6bcd0739c721"
+  },
+  "access_level": "USER",
+  "name": "Vivek",
+  "email": "vivekkolasani45@gmail.com",
+  "password": "$2b$10$mgtVqJhs.kYK3T0ctWE.ieCLJjYWemlRb.T5ulycDqblOjWC.BqUm",
+  "createdAt": {
+    "$date": "2021-02-21T18:14:25.910Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-21T18:14:25.910Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "60334454d1216d372671ef44"
+  },
+  "access_level": "USER",
+  "name": "Vicky",
+  "email": "vickykolasani@gmail.com",
+  "password": "$2b$10$EWaLrfxhuWRHhoRmPCTmPuqTGshcbcbwV41eAofNuDVLEhGGzOXXK",
+  "createdAt": {
+    "$date": "2021-02-22T05:42:44.396Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-22T05:42:44.396Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "603396d8cd953483ee700fa3"
+  },
+  "access_level": "ADMIN",
+  "name": "Admin",
+  "email": "admin@gmail.com",
+  "password": "$2b$10$1WQcnhI0WdvysfkhR5GrceUK5xTQrzqjN27HIojRyNrgBjg1NDntO",
+  "createdAt": {
+    "$date": "2021-02-22T11:34:48.253Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-22T11:34:48.253Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "60349f992ba043a1425524d9"
+  },
+  "access_level": "USER",
+  "name": "User",
+  "email": "user@gmail.com",
+  "password": "$2b$10$7ZYbHCboLMpN.xMn0x2QCuvZw6uYDdYgtd9X46.2eRwJWCJP9FgP.",
+  "createdAt": {
+    "$date": "2021-02-23T06:24:25.286Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-23T06:24:25.286Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "60363eaf86903f5b0bb38075"
+  },
+  "access_level": "USER",
+  "name": "name",
+  "email": "name@mail.com",
+  "password": "$2b$10$nZrDEQAx/Z2uRxV2wL9TEOmMDkeFefchEpY7Uj8joHpN/S/ohZ6VG",
+  "createdAt": {
+    "$date": "2021-02-24T11:55:27.262Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-24T11:55:27.262Z"
+  },
+  "__v": 0
+}]

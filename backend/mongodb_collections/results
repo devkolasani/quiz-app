@@ -1,0 +1,31 @@
+[{
+  "_id": {
+    "$oid": "6034a04cbeb036a2110cd4f2"
+  },
+  "difficulty_level": "HARD",
+  "user": "60349f992ba043a1425524d9",
+  "quiz_id": "60348df1c9ef648d0b42cdc9",
+  "percentage": 60,
+  "createdAt": {
+    "$date": "2021-02-23T06:27:24.296Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-23T06:27:24.296Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6038c1cabfea453f6848c3d6"
+  },
+  "difficulty_level": "EASY",
+  "user": "60363eaf86903f5b0bb38075",
+  "quiz_id": "60339acebed7c187ca0b90c1",
+  "percentage": 100,
+  "createdAt": {
+    "$date": "2021-02-26T09:39:22.727Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-26T09:39:22.727Z"
+  },
+  "__v": 0
+}]

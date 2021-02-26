@@ -1,0 +1,176 @@
+{
+	"info": {
+		"_postman_id": "330d5e29-3bb9-48d2-afdf-99cabb2753e0",
+		"name": "Quiz App",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Auth Register",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\" : \"User\",\n    \"email\" : \"user@gmail.com\",\n    \"password\": \"userpassword\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:4000/auth/register",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"auth",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Auth Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"email\" : \"user@gmail.com\",\n    \"password\": \"userpassword\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:4000/auth/login",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"auth",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create quiz",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYwMzM5NmQ4Y2Q5NTM0ODNlZTcwMGZhMyIsIm5hbWUiOiJBZG1pbiIsImVtYWlsIjoiYWRtaW5AZ21haWwuY29tIiwiYWNjZXNzX2xldmVsIjoiQURNSU4iLCJpYXQiOjE2MTM5OTM3Njd9.cepRNZxtw6kF39qjJBQDKfYZo5ZfafrXs7T9QW_WYWc",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"difficulty_level\": \"HARD\",\n\t\"questions\": [\n\t\t{\n\t\t\t\"question\": \"What day is it\",\n\t\t\t\"options\": [\"Day A\", \"Day B\", \"Day C\", \"Day D\"]\n\t\t},\n\t\t{\n\t\t\t\"question\": \"What day is it\",\n\t\t\t\"options\": [\"Day A\", \"Day B\", \"Day C\", \"Day D\"]\n\t\t},\n\t\t{\n\t\t\t\"question\": \"What day is it\",\n\t\t\t\"options\": [\"Day A\", \"Day B\", \"Day C\", \"Day D\"]\n\t\t},\n\t\t{\n\t\t\t\"question\": \"What day is it\",\n\t\t\t\"options\": [\"Day A\", \"Day B\", \"Day C\", \"Day D\"]\n\t\t},\n\t\t{\n\t\t\t\"question\": \"What day is it\",\n\t\t\t\"options\": [\"Day A\", \"Day B\", \"Day C\", \"Day D\"]\n\t\t},\n\t\t{\n\t\t\t\"question\": \"What day is it\",\n\t\t\t\"options\": [\"Day A\", \"Day B\", \"Day C\", \"Day D\"]\n\t\t},\n\t\t{\n\t\t\t\"question\": \"What day is it\",\n\t\t\t\"options\": [\"Day A\", \"Day B\", \"Day C\", \"Day D\"]\n\t\t},\n\t\t{\n\t\t\t\"question\": \"What day is it\",\n\t\t\t\"options\": [\"Day A\", \"Day B\", \"Day C\", \"Day D\"]\n\t\t},\n\t\t{\n\t\t\t\"question\": \"What day is it\",\n\t\t\t\"options\": [\"Day A\", \"Day B\", \"Day C\", \"Day D\"]\n\t\t},\n\t\t{\n\t\t\t\"question\": \"What day is it\",\n\t\t\t\"options\": [\"Day A\", \"Day B\", \"Day C\", \"Day D\"]\n\t\t},\n\t\t{\n\t\t\t\"question\": \"What day is it\",\n\t\t\t\"options\": [\"Day A\", \"Day B\", \"Day C\", \"Day D\"]\n\t\t},\n\t\t{\n\t\t\t\"question\": \"What day is it\",\n\t\t\t\"options\": [\"Day A\", \"Day B\", \"Day C\", \"Day D\"]\n\t\t},\n\t\t{\n\t\t\t\"question\": \"What day is it\",\n\t\t\t\"options\": [\"Day A\", \"Day B\", \"Day C\", \"Day D\"]\n\t\t},\n\t\t{\n\t\t\t\"question\": \"What day is it\",\n\t\t\t\"options\": [\"Day A\", \"Day B\", \"Day C\", \"Day D\"]\n\t\t},\n\t\t{\n\t\t\t\"question\": \"What day is it\",\n\t\t\t\"options\": [\"Day A\", \"Day B\", \"Day C\", \"Day D\"]\n\t\t},\n\t\t{\n\t\t\t\"question\": \"What day is it\",\n\t\t\t\"options\": [\"Day A\", \"Day B\", \"Day C\", \"Day D\"]\n\t\t},\n\t\t{\n\t\t\t\"question\": \"What day is it\",\n\t\t\t\"options\": [\"Day A\", \"Day B\", \"Day C\", \"Day D\"]\n\t\t},\n\t\t{\n\t\t\t\"question\": \"What day is it\",\n\t\t\t\"options\": [\"Day A\", \"Day B\", \"Day C\", \"Day D\"]\n\t\t},\n\t\t{\n\t\t\t\"question\": \"What day is it\",\n\t\t\t\"options\": [\"Day A\", \"Day B\", \"Day C\", \"Day D\"]\n\t\t},\n\t\t{\n\t\t\t\"question\": \"What day is it\",\n\t\t\t\"options\": [\"Day A\", \"Day B\", \"Day C\", \"Day D\"]\n\t\t}\n\t],\n\t\"keys\": [\n\t\t\"A\",\n\t\t\"B\",\n\t\t\"C\",\n\t\t\"D\",\n\t\t\"A\",\n\t\t\"B\",\n\t\t\"C\",\n\t\t\"D\",\n\t\t\"A\",\n\t\t\"B\",\n\t\t\"C\",\n\t\t\"D\",\n\t\t\"A\",\n\t\t\"B\",\n\t\t\"C\",\n\t\t\"D\",\n\t\t\"A\",\n\t\t\"B\",\n\t\t\"C\",\n\t\t\"D\"\n\t]\n}\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:4000/quiz/createquiz",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"quiz",
+						"createquiz"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Submit quiz",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYwMzQ5Zjk5MmJhMDQzYTE0MjU1MjRkOSIsIm5hbWUiOiJVc2VyIiwiZW1haWwiOiJ1c2VyQGdtYWlsLmNvbSIsImFjY2Vzc19sZXZlbCI6IlVTRVIiLCJpYXQiOjE2MTQwNjE0OTF9.58guw13JrjcL1w59EaBz-m31tgPOwKbrJu7uyHvAmyo",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"quiz_id\": \"60348df1c9ef648d0b42cdc9\",\n    \"quiz_answers\": [\n        \"A\",\"B\",\"C\",\"D\",\"D\",\"C\",\"B\",\"A\",\"A\",\"B\",\"C\",\"D\",\"D\",\"C\",\"B\",\"A\",\"A\",\"B\",\"C\",\"D\"\n    ]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:4000/quiz/submitquiz",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"quiz",
+						"submitquiz"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Quiz by difficulty",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYwMzQ5Zjk5MmJhMDQzYTE0MjU1MjRkOSIsIm5hbWUiOiJVc2VyIiwiZW1haWwiOiJ1c2VyQGdtYWlsLmNvbSIsImFjY2Vzc19sZXZlbCI6IlVTRVIiLCJpYXQiOjE2MTQwNjE0OTF9.58guw13JrjcL1w59EaBz-m31tgPOwKbrJu7uyHvAmyo",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:4000/quiz/quizbydifficulty?difficulty_level=EASY",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"quiz",
+						"quizbydifficulty"
+					],
+					"query": [
+						{
+							"key": "difficulty_level",
+							"value": "EASY"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
