@@ -7,7 +7,7 @@ const quizController = {
 		try {
 			const randomQuiz = await Quiz.aggregate()
 				.match({
-					difficulty_level: req.body.difficulty_level,
+					difficulty_level: req.query.difficulty_level,
 				})
 				.sample(1);
 
@@ -18,6 +18,7 @@ const quizController = {
 			});
 		} catch (err) {
 			res.status(500).send({ error: err });
+			console.log(err);
 		}
 	},
 	submitquiz: async (req, res) => {
@@ -55,6 +56,7 @@ const quizController = {
 	createquiz: async (req, res) => {
 		try {
 			// Create object based on Quiz model
+			console.log(req.body);
 			const quiz = new Quiz({
 				created_by_user: res.id,
 				difficulty_level: req.body.difficulty_level,

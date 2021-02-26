@@ -8,6 +8,7 @@ const AuthContextProvider = (props) => {
 	const [auth, setAuth] = useState({
 		name: "",
 		token: "",
+		access_level: "",
 		isLoggedIn: false,
 	});
 

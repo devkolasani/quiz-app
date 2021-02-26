@@ -2,15 +2,23 @@
 import { useState, useContext } from "react";
 import { Redirect } from "react-router-dom";
 
+// API
+import quizByDifficulty from "../../api/quiz/quizByDifficulty";
+
 //Contexts
 import { AuthContext } from "../../contexts/AuthContext";
+import { QuizContext } from "../../contexts/QuizContext";
 
-const Home = () => {
+const Home = (props) => {
 	const [formState, setFormState] = useState("EASY");
 
 	const { auth } = useContext(AuthContext);
+	const { setQuiz } = useContext(QuizContext);
 
 	if (!auth.isLoggedIn) {
+		if (auth.access_level === "ADMIN") {
+			return <Redirect to="/admin" />;
+		}
 		return <Redirect to="/login" />;
 	}
 
@@ -19,8 +27,16 @@ const Home = () => {
 		setFormState(e.target.value);
 	};
 
-	const handleSubmit = (e) => {
+	const handleSubmit = async (e) => {
 		e.preventDefault();
+		const res = await quizByDifficulty(auth.token, formState);
+		setQuiz({
+			id: res.data.quiz_id,
+			difficulty: res.data.difficulty_level,
+			questions: res.data.questions,
+			answers: [],
+		});
+		props.history.push("/quiz");
 	};
 
 	return (

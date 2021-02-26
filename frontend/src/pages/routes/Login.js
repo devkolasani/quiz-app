@@ -27,13 +27,17 @@ const Login = (props) => {
 	const handleSubmit = async (e) => {
 		e.preventDefault();
 		const res = await login(formState);
-		console.log(res.data);
 		setAuth({
+			isLoggedIn: true,
 			name: res.data.name,
 			token: res.data.auth_token,
-			isLoggedIn: true,
+			access_level: res.data.access_level,
 		});
-		props.history.push("/home");
+		if (res.data.access_level === "ADMIN") {
+			props.history.push("/admin");
+		} else {
+			props.history.push("/home");
+		}
 	};
 
 	return (

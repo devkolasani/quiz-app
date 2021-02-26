@@ -40,6 +40,7 @@ const authController = {
 			// Return access token
 			res.status(202).send({
 				name: user.name,
+				access_level: user.access_level,
 				auth_token: token,
 			});
 		} catch (err) {
