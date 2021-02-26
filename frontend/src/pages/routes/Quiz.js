@@ -103,10 +103,16 @@ const Quiz = (props) => {
 			</div>
 			<div className="columns is-centered has-text-left">
 				<div className="column is-one-fifth ">
-					<button class="button is-dark mr-6" onClick={handleNext}>
+					<button
+						className="button is-dark mr-6"
+						onClick={handleNext}
+					>
 						Next
 					</button>
-					<button class="button is-dark ml-6" onClick={handleSubmit}>
+					<button
+						className="button is-dark ml-6"
+						onClick={handleSubmit}
+					>
 						Submit
 					</button>
 				</div>

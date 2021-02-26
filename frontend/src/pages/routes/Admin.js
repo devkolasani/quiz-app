@@ -21,14 +21,12 @@ const Admin = (props) => {
 		const fileReader = new FileReader();
 		fileReader.readAsText(e.target.files[0], "UTF-8");
 		fileReader.onload = (e) => {
-			console.log("e.target.result", e.target.result);
 			setQuiz(e.target.result);
 		};
 	};
 
 	const handleSubmit = (e) => {
 		e.preventDefault();
-		console.log(quiz);
 		createQuiz(auth.token, quiz);
 		props.history.push("/admin");
 	};
@@ -42,19 +40,16 @@ const Admin = (props) => {
 			</div>
 			<div className="columns is-centered has-text-centered py-6">
 				<div className="column is-half is-centered">
-					<div class="file is-primary is-centered">
-						<label class="file-label">
+					<div className="file is-primary is-centered">
+						<label className="file-label">
 							<input
 								type="file"
 								name="questions"
-								class="file-input"
+								className="file-input"
 								onChange={handleUpload}
 							/>
-							<span class="file-cta">
-								<span class="file-icon">
-									<i class="fas fa-upload"></i>
-								</span>
-								<span class="file-label">Select file</span>
+							<span className="file-cta">
+								<span className="file-label">Select file</span>
 							</span>
 						</label>
 					</div>

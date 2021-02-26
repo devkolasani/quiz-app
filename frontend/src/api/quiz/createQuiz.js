@@ -5,8 +5,8 @@ const createQuiz = async (token, quizdata) => {
 		const res = await axios({
 			method: "post",
 			headers: { Authorization: `Bearer ${token}` },
-			url: `http://localhost:4000/quiz/createquiz`,
-			data: quizdata,
+			url: "http://localhost:4000/quiz/createquiz",
+			data: JSON.parse(quizdata),
 		});
 		return res;
 	} catch (err) {
